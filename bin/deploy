@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+THIS=$(basename $0)
+DIR="$( cd -P "$( dirname "$0" )" && pwd )"
+cd $DIR
+cd ..
+CURR_FOLDER=`pwd`
+
+# Root
+cd $CURR_FOLDER
+LOG=$CURR_FOLDER/rsync.log
+SOURCE=$CURR_FOLDER/public/.
+DEST=gruposuper8.com:/home/lagden/webapps/gs8/.
+
+# Sync
+rsync $SOURCE $DEST --rsh ssh --recursive --delete > $LOG

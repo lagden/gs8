@@ -1,14 +1,22 @@
 extends layout
 
+block title
+  | Grupo Super 8
+
 block content
   section.splash
-    img(src='img/logo.svg', alt='Grupo Super 8')
-    hgroup
-      h1 Grupo Super 8
-      h3 Produtora de Eventos, Festas, Casamentos e Bodas
 
-    .contato
+    .logo
+      img(src='img/logo.svg', alt='Grupo Super 8')
+      h1 Grupo Super 8
+
+    .about
+      h3 Produtora de Eventos, Festas, Casamentos e Bodas
       table
+        tr
+          td
+            i.fa.fa-male
+          td Leonardo Monteiro
         tr
           td
             i.fa.fa-mobile
@@ -17,5 +25,5 @@ block content
           td
             i.fa.fa-email
           td
-            a(href="mailto:leomonteiro26@yahoo.com.br")
-              | leomonteiro26@yahoo.com.br
+            a(href="mailto:leo@gruposuper8.com")
+              | leo@gruposuper8.com

@@ -1,0 +1,86 @@
+unstyledLink()
+  color inherit
+  text-decoration inherit
+  &:active,
+  &:focus
+      outline none
+
+a
+  unstyledLink()
+
+
+@font-face
+  font-family 'FontAwesome'
+  src url('../fonts/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontawesome-webfont.woff') format('woff')
+  font-weight normal
+  font-style normal
+
+.fa
+  display inline-block
+  font normal normal normal 100% FontAwesome
+  font-size inherit
+  text-rendering auto
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  transform translate(0, 0)
+  font-size 1.3em
+
+.fa-mobile:before
+  content: '\f10b'
+
+.fa-email:before
+  content: '\f003'
+
+.fa-male:before
+  content: '\f183'
+
+html
+  background-color black
+  background-position 50% 50%, 0 0
+  background-attachment fixed, scroll
+  background-repeat no-repeat, repeat
+  background-size contain, 100px 56px
+  background-image radial-gradient(circle farthest-corner at 50% 0%, rgba(#132435, 0.78) 0%, rgba(31, 51, 88, 0.97) 80%), url('../img/hexa.svg')
+
+body
+  color white
+
+.splash
+  box-sizing border-box
+  font-family 'Roboto', sans-serif
+  display flex
+  justify-content center
+  align-items center
+  height 100vh
+  padding 20px
+  text-align center
+
+.logo
+  flex-grow 0
+  flex-shrink 0
+  flex-basis auto
+  padding 10px
+  > h1
+    font-size 1.8em
+  > img
+    display block
+    margin 0 auto
+    width 60%
+
+.about
+  padding 20px
+  table
+    margin: 0 auto
+    td
+      padding 5px
+      text-align left
+      &:first-child
+        text-align right
+
+@media only screen and (orientation: portrait)
+  .splash
+    flex-direction column
+
+  .logo
+    padding 0
+    font-size 80%

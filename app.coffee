@@ -5,7 +5,22 @@ js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
+  ignores: [
+    'readme.md'
+    '**/layout.*'
+    '**/_*'
+    '.gitignore'
+    'ship.*conf'
+    '*.log'
+    '.keep'
+    'bin/*'
+  ]
+
+  dump_dirs: [
+    'views'
+    'assets'
+    'bin'
+  ]
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
@@ -13,7 +28,11 @@ module.exports =
   ]
 
   stylus:
-    use: [axis(), rupture(), autoprefixer()]
+    use: [
+      axis()
+      rupture()
+      autoprefixer()
+    ]
     sourcemap: true
 
   'coffee-script':

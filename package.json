@@ -1,7 +1,11 @@
 {
   "name": "gs8",
   "description": "Produtora de Eventos, Festas, Casamentos e Bodas",
-  "dependencies": {
+  "scripts": {
+    "start": "roots watch",
+    "deploy": "roots clean && roots compile -e production && bin/deploy"
+  },
+  "devDependencies": {
     "autoprefixer-stylus": "0.5.x",
     "axis": "0.3.x",
     "coffee-script": "1.8.x",
