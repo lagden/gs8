@@ -1,0 +1,14 @@
+article#trabalhos
+
+  header.highlight
+    h1 Trabalhos
+
+  .masonry
+    .grid
+      .grid__sizer
+      each c in [1, 2, 3, 4, 5]
+        each v in [300, 400, 500]
+          .grid__item
+            img(src="http://placekitten.com/g/500/#{v}", alt="placekitten")
+
+

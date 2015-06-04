@@ -1,0 +1,16 @@
+extends layout
+
+block title
+  | Grupo Super 8
+
+block content
+  
+  //- each v in menu
+  //-   include ./modules/#{v.id}.jade
+
+  include ./modules/sobre.jade
+  include ./modules/servicos.jade
+  include ./modules/trabalhos.jade
+  include ./modules/contato.jade
+
+  include ./modules/nav.jade

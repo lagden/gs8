@@ -1,0 +1,29 @@
+{
+  "menu": [
+    {
+      "caption": "Home",
+      "link": "#home",
+      "id": "home"
+    },
+    {
+      "caption": "Sobre",
+      "link": "#sobre",
+      "id": "sobre"
+    },
+    {
+      "caption": "Serviços",
+      "link": "#servicos",
+      "id": "servicos"
+    },
+    {
+      "caption": "Trabalhos",
+      "link": "#trabalhos",
+      "id": "trabalhos"
+    },
+    {
+      "caption": "Contato",
+      "link": "#contato",
+      "id": "contato"
+    }
+  ]
+}

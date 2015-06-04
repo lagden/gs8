@@ -2,6 +2,7 @@
   "name": "gs8",
   "description": "Produtora de Eventos, Festas, Casamentos e Bodas",
   "scripts": {
+    "postinstall": "volo add -skipexists",
     "start": "roots watch",
     "deploy": "roots clean && roots compile -e production && bin/deploy"
   },
@@ -14,6 +15,21 @@
     "js-pipeline": "0.2.x",
     "marked": "0.3.x",
     "rupture": "0.6.x",
-    "stylus": "0.49.x"
+    "stylus": "0.49.x",
+    "volo": "^0.3.6"
+  },
+  "volo": {
+    "baseUrl": "assets/js/lib",
+    "dependencies": {
+      "jquery": "github:jquery/jquery/2.1.3",
+      "gsap": "github:greensock/GreenSock-JS/1.17.0#src/uncompressed",
+      "bootstrap/scrollspy": "github:twbs/bootstrap/v3.3.4#js/scrollspy.js",
+      "desandro/masonry": "github:desandro/masonry/v3.3.0#dist",
+      "desandro/imagesloaded": "github:desandro/imagesloaded/v3.1.8#imagesloaded.pkgd.js",
+      "desandro/flickity": "github:metafizzy/flickity/v1.0.2#dist"
+    }
+  },
+  "dependencies": {
+    "jeet": "^6.1.2"
   }
 }
