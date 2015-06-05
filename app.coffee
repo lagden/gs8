@@ -35,6 +35,7 @@ module.exports =
       'assets/js/lib/desandro/imagesloaded.js'
       'assets/js/lib/desandro/masonry/masonry.pkgd.js'
       'assets/js/lib/desandro/flickity/flickity.pkgd.js'
+      'assets/js/lib/osvaldas/imagelightbox.js'
       'assets/js/*.coffee'
     ]),
     css_pipeline(files: 'assets/css/*.styl')

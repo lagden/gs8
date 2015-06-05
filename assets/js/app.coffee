@@ -1,3 +1,4 @@
+# Fonts
 WebFontConfig =
   google:
     families: [
@@ -14,8 +15,7 @@ do ->
   s.parentNode.insertBefore wf, s
   return
 
-qS = document.querySelector.bind document
-
+# ScrollTo
 scrollWindowTo = (to, duration = 1) ->
   TweenMax.to window, duration,
     scrollTo:
@@ -24,15 +24,18 @@ scrollWindowTo = (to, duration = 1) ->
       autoKill: true
   return
 
-$menu = $ '#navbar'
+# Menu
 $body = $ 'body'
+$menu = $ '#navbar'
 
+# Menu scrollTo
 $menu.on 'click', 'ul > li > a', (event) ->
   event.preventDefault()
   $el = $ @hash
   scrollWindowTo $el.offset().top, 2
   return
 
+# Menu spy
 $body.scrollspy
   target: '#navbar'
 
@@ -42,9 +45,50 @@ $grid.masonry
   itemSelector: '.grid__item'
   columnWidth: '.grid__sizer'
   isFitWidth: true
-  # percentPosition: true
 
 $grid
   .imagesLoaded()
   .progress ->
     $grid.masonry()
+
+
+# Lightbox
+$indica = null
+$closeBtn = null
+
+activityIndicatorOn = ->
+  str = '<div class="imagelightbox-loading"><div></div></div>'
+  $indica = $(str).appendTo 'body'
+  return
+
+activityIndicatorOff = ->
+  $indica.remove()
+  return
+
+closeButtonOn = (instance) ->
+  str = '<button type="button" class="imagelightbox-close"></button>'
+  $closeBtn = $(str).appendTo('body').on 'click touchend', ->
+    closeButtonOff()
+    instance.quitImageLightbox()
+    false
+  return
+
+closeButtonOff = ->
+  $closeBtn.remove()
+  return
+
+$lightbox = $('.picWorks').imageLightbox
+  quitOnDocClick: false
+  onStart: ->
+    closeButtonOn $lightbox
+    return
+  onEnd: ->
+    closeButtonOff()
+    activityIndicatorOff()
+    return
+  onLoadStart: ->
+    activityIndicatorOn()
+    return
+  onLoadEnd: ->
+    activityIndicatorOff()
+    return

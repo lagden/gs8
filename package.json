@@ -11,7 +11,9 @@
     "axis": "0.3.x",
     "coffee-script": "1.8.x",
     "css-pipeline": "0.2.x",
-    "jade": "1.x",
+    "jade": "~1.10.0",
+    "jeet": "~6.1.2",
+    "jstransformer-marked": "0.0.1",
     "js-pipeline": "0.2.x",
     "marked": "0.3.x",
     "rupture": "0.6.x",
@@ -26,10 +28,8 @@
       "bootstrap/scrollspy": "github:twbs/bootstrap/v3.3.4#js/scrollspy.js",
       "desandro/masonry": "github:desandro/masonry/v3.3.0#dist",
       "desandro/imagesloaded": "github:desandro/imagesloaded/v3.1.8#imagesloaded.pkgd.js",
-      "desandro/flickity": "github:metafizzy/flickity/v1.0.2#dist"
+      "desandro/flickity": "github:metafizzy/flickity/v1.0.2#dist",
+      "osvaldas/imagelightbox": "http://osvaldas.info/examples/image-lightbox-responsive-touch-friendly/imagelightbox.js"
     }
-  },
-  "dependencies": {
-    "jeet": "^6.1.2"
   }
 }
