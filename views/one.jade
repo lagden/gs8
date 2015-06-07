@@ -4,19 +4,11 @@ block title
   | Grupo Super 8
 
 block content
-  
-  #home
-    .gallery.js-flickity(data-flickity-options!={"imagesLoaded": true, "pageDots": false, "autoPlay": true, "wrapAround": true, "prevNextButtons": false})
-      img(src="http://i.imgur.com/bwy74ok.jpg", alt="orange tree")
-      img(src="http://i.imgur.com/bAZWoqx.jpg", alt="submerged")
-      img(src="http://i.imgur.com/PgmEBSB.jpg", alt="look-out")
-      img(src="http://i.imgur.com/aboaFoB.jpg", alt="freedom tower")
-      img(src="http://i.imgur.com/LkmcILl.jpg", alt="drizzle")
-      img(src="http://i.imgur.com/q9zO6tw.jpg", alt="cat nose")
-
-  include ./modules/sobre.jade
-  include ./modules/servicos.jade
-  include ./modules/trabalhos.jade
-  include ./modules/contato.jade
-
-  include ./modules/nav.jade
+  include ./modules/one/_header.jade
+  include ./modules/one/_nav.jade
+  main(role='main')
+    include ./modules/one/_home.jade
+    include ./modules/one/_sobre.jade
+    include ./modules/one/_servicos.jade
+    include ./modules/one/_trabalhos.jade
+    include ./modules/one/_contato.jade

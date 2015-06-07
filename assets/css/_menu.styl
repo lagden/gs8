@@ -1,0 +1,97 @@
+.right
+  text-align right
+
+.logo-one
+  margin 0
+  padding 0
+  overflow hidden
+  display block
+  padding-left (194 / 3) * 1px + 20
+  height (252 / 3) * 1px
+  line-height (252 / 3) * 1px
+  background-image url('../img/logo.svg')
+  background-repeat no-repeat
+  background-position 20px center
+  background-size auto 75%
+  font-size 1.4em
+  text-transform capitalize
+  font-family Roboto
+  &:after
+    content: 'Grupo Super 8'
+  +below(768px)
+    &:after
+      content: 'GS8'
+
+.bar
+  display none
+  +below(768px)
+    display block
+
+.navbar
+  width 100vw
+  position fixed
+  top 19px
+  left 0
+  z-index 1000
+
+.navbar__ul
+  position relative
+  padding 0
+  margin 0
+  list-style none
+  text-align right
+  > li
+    display inline-block
+    padding 5px
+    > a
+      backface-visibility hidden
+      will-change background-color
+
+      transition 0.5s background-color
+
+      border-radius 5px
+      display block
+      padding 10px
+      &:hover
+        background rgba(0, 157, 234, 0.2)
+    &.active
+      > a
+        background rgba(0, 157, 234, 0.9)
+    +below(768px)
+      display block
+
+body
+  &.open
+    overflow: hidden
+
+.header-bg
+  background-image linear-gradient(to bottom, rgba(black , 1) 10%, rgba(black , 0.3) 100%);
+  width 100%
+  position fixed
+  z-index 1000
+  top 0
+  left 0
+  &.open
+  &.open ~ main
+    transform translateX($menuSize * -1px)
+
+.navbar
+  +below(768px)
+    z-index 1001
+    position fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left auto
+    width $menuSize * 1px
+    height 100%
+    transform translateX($menuSize * 1px)
+    overflow-y auto
+    background-image linear-gradient(to bottom, rgba(black , 1) 0%, rgba(black , 0.5) 100%)
+    &.open
+      transform translateX(0)
+
+.header-bg,
+.navbar,
+main
+  transition transform 0.3s ease-out

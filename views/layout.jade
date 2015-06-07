@@ -7,13 +7,14 @@ html
     meta(name='description', content='description of your site')
     meta(name='author', content= "author of the site")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", type="text/css", href="js/lib/desandro/flickity/flickity.css")
     title
       block title
         | Grupo Super 8
 
     != css()
 
-  body
+  body.transitions-ready.color0
     block content
 
     != js()

@@ -59,12 +59,5 @@ module.exports =
       autoprefixer()
     ]
 
-  jade:
-    pretty: false
-
-  server:
-    clean_urls: true
-    gzip: true
-
   locals:
     menu: dados.menu

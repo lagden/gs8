@@ -2,7 +2,8 @@
 WebFontConfig =
   google:
     families: [
-      'Roboto::latin'
+      'Roboto:400,100:latin'
+      'Quicksand::latin'
     ]
 
 do ->
@@ -26,10 +27,10 @@ scrollWindowTo = (to, duration = 1) ->
 
 # Menu
 $body = $ 'body'
-$menu = $ '#navbar'
+$navbar = $ '#navbar'
 
 # Menu scrollTo
-$menu.on 'click', 'ul > li > a', (event) ->
+$navbar.on 'click', 'ul > li > a', (event) ->
   event.preventDefault()
   $el = $ @hash
   scrollWindowTo $el.offset().top, 2
@@ -92,3 +93,50 @@ $lightbox = $('.picWorks').imageLightbox
   onLoadEnd: ->
     activityIndicatorOff()
     return
+
+# Burguer
+$burger = $ '#burger'
+
+burgerClick = ->
+  m = ['addClass', 'removeClass']
+  contain = $burger.hasClass('open')
+  a = if contain then 1 else 0
+  b = a^1
+
+  $burger[m[a]] 'open'
+  $burger[m[b]] 'close'
+  return
+
+$burger.on 'click.menu', burgerClick
+
+
+$main = $ 'main'
+$header = $ '.header-bg'
+
+closeMenu = ->
+  els = [$body, $navbar, $header]
+  $el.removeClass 'open' for $el in els
+  # burgerClick()
+  return
+
+toggleMenu = ->
+  els = [$body, $navbar, $header]
+  $el.toggleClass 'open' for $el in els
+  return
+
+$main.on 'click', closeMenu
+$burger.on 'click.anima', toggleMenu
+
+# Color
+cc = 0
+lastcc = 0
+colorInterval = setInterval ->
+  $body.removeClass 'color' + lastcc
+  if cc < 17
+    cc++
+  else
+    cc = 0
+  lastcc = cc
+  $body.addClass 'color' + cc
+  return
+, 3000
