@@ -12,7 +12,9 @@ module.exports =
     'readme.md'
     '**/layout.*'
     '**/_*'
+    '**/dados.json'
     '.gitignore'
+    '.editorconfig'
     'ship.*conf'
     '*.log'
     '.keep'
@@ -61,3 +63,4 @@ module.exports =
 
   locals:
     menu: dados.menu
+    galeria: dados.galeria

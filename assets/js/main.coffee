@@ -97,9 +97,9 @@ $lightbox = $('.picWorks').imageLightbox
 # Burguer
 $burger = $ '#burger'
 
-burgerClick = ->
+burgerClick = (contain)->
   m = ['addClass', 'removeClass']
-  contain = $burger.hasClass('open')
+  contain = contain || $burger.hasClass('open')
   a = if contain then 1 else 0
   b = a^1
 
@@ -107,21 +107,19 @@ burgerClick = ->
   $burger[m[b]] 'close'
   return
 
-$burger.on 'click.menu', burgerClick
-
-
 $main = $ 'main'
 $header = $ '.header-bg'
 
 closeMenu = ->
   els = [$body, $navbar, $header]
   $el.removeClass 'open' for $el in els
-  # burgerClick()
+  burgerClick(true)
   return
 
 toggleMenu = ->
   els = [$body, $navbar, $header]
   $el.toggleClass 'open' for $el in els
+  burgerClick()
   return
 
 $main.on 'click', closeMenu

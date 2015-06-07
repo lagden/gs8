@@ -3,13 +3,9 @@ article#trabalhos.article--dark
   header.highlight
     h1 Trabalhos
 
-  .masonry
-    .grid
-      .grid__sizer
-      each c in [1, 2, 3, 4, 5]
-        each v in [300, 400, 500]
-          .grid__item
-            a.picWorks(href="http://dummyimage.com/1000x#{v}/09f/fff.png")
-              img(src="http://dummyimage.com/500x#{v}/09f/fff.png", alt="placekitten")
-
-
+  .grid
+    .grid__sizer
+    each c in galeria
+      .grid__item
+        a.picWorks(href="#{c.big}")
+          img(src="#{c.small}", alt="#{c.alt}")

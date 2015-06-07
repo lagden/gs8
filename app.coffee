@@ -64,3 +64,4 @@ module.exports =
 
   locals:
     menu: dados.menu
+    galeria: dados.galeria

@@ -1,4 +1,13 @@
-$gallery = 600
+$gallery = 500
+
+.pad-5
+  padding 5px
+
+.right
+  text-align right
+
+.center
+  text-align center
 
 .gs
   center(960px, 20px)
@@ -7,77 +16,26 @@ $gallery = 600
   col(1/2)
   +below(768px)
     stack()
+    margin-bottom 20px
 
 .third
   col(1/3)
   +below(768px)
     stack()
+    margin-bottom 20px
 
 .two-third
   col(2/3)
   +below(768px)
     stack()
+    margin-bottom 20px
 
-.embed-responsive
-  position relative
-  display block
-  height 0
-  padding 0
-  overflow hidden
+p:last-of-type
+  margin-bottom 30px
+  +below(768px)
+    margin-bottom 20px
 
-  .embed-responsive-item,
-  iframe,
-  embed,
-  object,
-  video
-    position absolute
-    top 0
-    left 0
-    bottom 0
-    height 100%
-    width 100%
-    border 0
 
-// Modifier class for 16x9 aspect ratio
-.embed-responsive--16x9
-  padding-bottom 56.25%
-
-// Modifier class for 4x3 aspect ratio
-.embed-responsive--4x3
-  padding-bottom 75%
-
-// Flex Stuff
-.flex,
-.flex--row
-  display flex
-  flex-wrap mowrap
-  justify-content flex-start
-  align-items stretch
-
-.flex--between
-  justify-content space-between
-
-.flex--center
-  align-items center
-
-.flex--col
-  flex-direction column
-
-.flex__child
-  flex 1
-  align-self auto
-
-.flex__child--two
-  flex 2
-
-.flex__child--minimal
-  flex 0 0 auto
-  width 30px
-  text-align right
-  padding-right 10px
-
-.pad-5
-  padding 5px
 
 .gallery
   img
@@ -101,3 +59,53 @@ $gallery = 600
 .article--light
   background rgba(#0F1823, 0.7)
   padding-bottom 20px
+
+.titleIcons
+  border-radius 50%
+  background-color rgba(blue, 0.3)
+  color white
+  padding 20px
+
+.frm
+
+  label
+    display block
+    margin-bottom 5px
+  input[type=text],
+  input[type=email],
+  textarea
+    box-sizing border-box
+    padding 5px
+    border-radius 5px
+    width 100%
+    color white
+    background-color rgba(blue, 0.2)
+    border 0
+
+  textarea
+    min-height 10em
+
+  .btn
+    padding 5px
+    border-radius 5px
+    color white
+    background-color rgba(blue, 0.5)
+    border 0
+
+.frm__grupo
+  margin-bottom 20px
+
+.contato__icons
+  width 30px
+  text-align right
+  padding-right 10px
+
+.footer
+  font-size 0.9em
+  border 1px rgba(gray, 0.2) solid
+  border-width 1px 0 0
+  background rgba(#0B141F, 0.8)
+  padding 20px 0
+
+.footer--logo
+  width 30px
