@@ -1,8 +1,8 @@
 mixin contatoInfo(icon)
-  .flex.flex__child.flex--row.flex--center.pad-5
-    .flex__child.flex__child--auto.contato__icons
+  tr
+    td
       i.fa(class='fa-#{icon}')
-    .flex__child.flex__child--two
+    td
       if block
         block
       else
@@ -18,33 +18,33 @@ article#contato.article--light
       Será uma satisfação apresentar detalhadamente o nosso trabalho.
 
     .two-third
-      form.frm(id="contatoForm", method="post", action="#")
+      form#contatoForm.frm(method='post', action='http://email.gruposuper8.com/send.php')
+        input#idade.visuallyhidden(name='idade', type='text', placeholder='Idade *')
         .frm__grupo
           label(for='#nomeForm') Nome
-          input#nomeForm(name='nome', type="text", placeholder='Nome *')
+          input#nomeForm(name='nome', type='text', placeholder='Nome *')
         .frm__grupo
           label(for='#emailForm') Email
-          input#emailForm(name='email', type="email", placeholder='Email *')
+          input#emailForm(name='email', type='email', placeholder='Email *')
         .frm__grupo
           label(for='#msgForm') Mensagem
-          textarea#msgForm(name='msg', placeholder="Deixe sua mensagem *")
+          textarea#msgForm(name='msg', placeholder='Deixe sua mensagem *')
 
-        button.btn(type="submit") Envia
+        button#btnSubmit.btn(type='submit') Envia
      
     .third
-      .flex.flex--row
-        .flex.flex__child.flex--col
-          +contatoInfo('male')
-            | Leonardo Monteiro
-          +contatoInfo('mobile')
-            a(href="tel:+55 11 98208-5992")
-              | +55 11 98208-5992
-          +contatoInfo('email')
-            a(href="mailto:leo@gruposuper8.com")
-              | leo@gruposuper8.com
-          +contatoInfo('facebook')
-            a(href="https://www.facebook.com/grupos8", target="_blank")
-              | Facebook
-          +contatoInfo('vimeo')
-            a(href="https://vimeo.com/gruposuper8", target="_blank")
-              | Vimeo
+      table.infoTable
+        +contatoInfo('male')
+          | Leonardo Monteiro
+        +contatoInfo('mobile')
+          a(href='tel:+55 11 98208-5992')
+            | +55 11 98208-5992
+        +contatoInfo('email')
+          a(href='mailto:leo@gruposuper8.com')
+            | leo@gruposuper8.com
+        +contatoInfo('facebook')
+          a(href='https://www.facebook.com/grupos8', target='_blank')
+            | Facebook
+        +contatoInfo('vimeo')
+          a(href='https://vimeo.com/gruposuper8', target='_blank')
+            | Vimeo

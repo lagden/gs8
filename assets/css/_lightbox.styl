@@ -2,10 +2,19 @@
 #imagelightbox
   cursor pointer
   position fixed
-  z-index 10000
+  z-index 2000
   -ms-touch-action none
   touch-action none
-  box-shadow 0 0 3.125em rgba(0, 0, 0, .75)
+  box-shadow 0 0 3.125em rgba(0, 0, 0, 0.75)
+
+.imagelightbox-overlay
+  background-color rgba(0, 0, 0, 0.7)
+  position fixed
+  z-index 1999
+  top 0
+  right 0
+  bottom 0
+  left 0
 
 .imagelightbox-loading,
 .imagelightbox-loading > div
@@ -71,6 +80,7 @@
   &:after
     transform rotate( -45deg )
 
+.imagelightbox-overlay,
 .imagelightbox-close,
 .imagelightbox-loading
   animation fade-in .25s linear

@@ -5,7 +5,7 @@ js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 jeet         = require 'jeet'
 
-dados        = require './dados.json'
+dados        = require './assets/dados.json'
 
 module.exports =
   ignores: [
@@ -63,4 +63,5 @@ module.exports =
 
   locals:
     menu: dados.menu
+    banner: dados.banner
     galeria: dados.galeria

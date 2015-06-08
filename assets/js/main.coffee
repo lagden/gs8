@@ -1,21 +1,3 @@
-# Fonts
-WebFontConfig =
-  google:
-    families: [
-      'Roboto:400,100:latin'
-      'Quicksand::latin'
-    ]
-
-do ->
-  ssl = if 'https:' == document.location.protocol then 'https' else 'http'
-  wf = document.createElement('script')
-  wf.src = "#{ssl}://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"
-  wf.type = 'text/javascript'
-  wf.async = 'true'
-  s = document.getElementsByTagName('script')[0]
-  s.parentNode.insertBefore wf, s
-  return
-
 # ScrollTo
 scrollWindowTo = (to, duration = 1) ->
   TweenMax.to window, duration,
@@ -56,6 +38,7 @@ $grid
 # Lightbox
 $indica = null
 $closeBtn = null
+$overlay = null
 
 activityIndicatorOn = ->
   str = '<div class="imagelightbox-loading"><div></div></div>'
@@ -78,12 +61,23 @@ closeButtonOff = ->
   $closeBtn.remove()
   return
 
+overlayOn = ->
+  srt = '<div class="imagelightbox-overlay"></div>'
+  $overlay = $(srt).appendTo 'body'
+  return
+
+overlayOff = ->
+  $overlay.remove()
+  return
+
 $lightbox = $('.picWorks').imageLightbox
   quitOnDocClick: false
   onStart: ->
+    overlayOn()
     closeButtonOn $lightbox
     return
   onEnd: ->
+    overlayOff()
     closeButtonOff()
     activityIndicatorOff()
     return
@@ -138,3 +132,33 @@ colorInterval = setInterval ->
   $body.addClass 'color' + cc
   return
 , 3000
+
+# Form
+$contatoForm = $ '#contatoForm'
+$btnSubmit = $ '#btnSubmit'
+
+enviaForm = (event) ->
+  event.preventDefault()
+  $.ajax
+    type: 'POST'
+    url: $contatoForm[0].action
+    data: $contatoForm.serializeArray()
+    xhrFields:
+      withCredentials: true
+    dataType: 'json'
+    beforeSend: (xhr) ->
+      xhr.setRequestHeader 'X-Requested-With', 'XMLHttpRequestGS8'
+      return
+  .done (res) ->
+    console.log 'ok', res
+    if res.success
+      $contatoForm[0].reset
+    alert res.message
+    return
+  .fail ->
+    console.log 'fail'
+    alert 'Falha ao enviar'
+    return
+  return
+
+$btnSubmit.on 'click', enviaForm

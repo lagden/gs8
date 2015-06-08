@@ -35,12 +35,10 @@ p:last-of-type
   +below(768px)
     margin-bottom 20px
 
-
-
 .gallery
   img
-    display: block
-    height: $gallery * 1px
+    display block
+    height $gallery * 1px
 
 .highlight
   padding 30px
@@ -67,7 +65,6 @@ p:last-of-type
   padding 20px
 
 .frm
-
   label
     display block
     margin-bottom 5px
@@ -100,6 +97,13 @@ p:last-of-type
   text-align right
   padding-right 10px
 
+.infoTable
+  td
+    padding 5px
+    text-align left
+    &:first-child
+      text-align right
+
 .footer
   font-size 0.9em
   border 1px rgba(gray, 0.2) solid
@@ -109,3 +113,23 @@ p:last-of-type
 
 .footer--logo
   width 30px
+  height 39px
+
+.visuallyhidden
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
+  &.focusable
+    &:active,
+    &:focus
+      clip auto
+      height auto
+      margin 0
+      overflow visible
+      position static
+      width auto

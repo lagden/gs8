@@ -5,7 +5,7 @@ article#trabalhos.article--dark
 
   .grid
     .grid__sizer
-    each c in galeria
+    each n in galeria
       .grid__item
-        a.picWorks(href="#{c.big}")
-          img(src="#{c.small}", alt="#{c.alt}")
+        a.picWorks(href="#{n.retina}")
+          img(src="#{n.normal}", alt="#{n.alt}")

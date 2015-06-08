@@ -1,4 +1,4 @@
 #home
   .gallery.js-flickity(data-flickity-options!={"imagesLoaded": true, "pageDots": false, "autoPlay": true, "wrapAround": true, "prevNextButtons": true, "draggable": false})
-    - for (var n = 1; n < 5; n++)
-      img(src='img/#{n}.jpg', srcset='img/#{n}.jpg 1x, img/#{n}-2x.jpg 2x', alt='#{n}')
+    each n in banner
+      img(src='#{n.normal}', srcset='#{n.normal} 1x, #{n.retina} 2x', alt='#{n.alt}')

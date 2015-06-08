@@ -1,161 +1,141 @@
 {
-  "menu": [
-    {
-      "caption": "Home",
-      "link": "#home",
-      "id": "home"
-    },
-    {
-      "caption": "Sobre",
-      "link": "#sobre",
-      "id": "sobre"
-    },
-    {
-      "caption": "Serviços",
-      "link": "#servicos",
-      "id": "servicos"
-    },
-    {
-      "caption": "Trabalhos",
-      "link": "#trabalhos",
-      "id": "trabalhos"
-    },
-    {
-      "caption": "Contato",
-      "link": "#contato",
-      "id": "contato"
-    }
-  ],
-  "galeria": [
-    {
-      "big": "img/galeria/1-2x.jpg",
-      "small": "img/galeria/1.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/2-2x.jpg",
-      "small": "img/galeria/2.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/3-2x.jpg",
-      "small": "img/galeria/3.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/4-2x.jpg",
-      "small": "img/galeria/4.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/5-2x.jpg",
-      "small": "img/galeria/5.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/6-2x.jpg",
-      "small": "img/galeria/6.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/7-2x.jpg",
-      "small": "img/galeria/7.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/8-2x.jpg",
-      "small": "img/galeria/8.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/9-2x.jpg",
-      "small": "img/galeria/9.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/10-2x.jpg",
-      "small": "img/galeria/10.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/11-2x.jpg",
-      "small": "img/galeria/11.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/12-2x.jpg",
-      "small": "img/galeria/12.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/13-2x.jpg",
-      "small": "img/galeria/13.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/14-2x.jpg",
-      "small": "img/galeria/14.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/15-2x.jpg",
-      "small": "img/galeria/15.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/16-2x.jpg",
-      "small": "img/galeria/16.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/17-2x.jpg",
-      "small": "img/galeria/17.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/18-2x.jpg",
-      "small": "img/galeria/18.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/19-2x.jpg",
-      "small": "img/galeria/19.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/20-2x.jpg",
-      "small": "img/galeria/20.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/21-2x.jpg",
-      "small": "img/galeria/21.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/22-2x.jpg",
-      "small": "img/galeria/22.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/23-2x.jpg",
-      "small": "img/galeria/23.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/24-2x.jpg",
-      "small": "img/galeria/24.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/25-2x.jpg",
-      "small": "img/galeria/25.jpg",
-      "alt": "GS8"
-    },
-    {
-      "big": "img/galeria/26-2x.jpg",
-      "small": "img/galeria/26.jpg",
-      "alt": "GS8"
-    }
-  ]
+    "menu": [{
+        "caption": "Home",
+        "link": "#home",
+        "id": "home"
+    }, {
+        "caption": "Sobre",
+        "link": "#sobre",
+        "id": "sobre"
+    }, {
+        "caption": "Serviços",
+        "link": "#servicos",
+        "id": "servicos"
+    }, {
+        "caption": "Trabalhos",
+        "link": "#trabalhos",
+        "id": "trabalhos"
+    }, {
+        "caption": "Contato",
+        "link": "#contato",
+        "id": "contato"
+    }],
+    "banner": [{
+        "normal": "img/banner/1.jpg",
+        "retina": "img/banner/1-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/banner/2.jpg",
+        "retina": "img/banner/2-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/banner/3.jpg",
+        "retina": "img/banner/3-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/banner/4.jpg",
+        "retina": "img/banner/4-2x.jpg",
+        "alt": "GS8"
+    }],
+    "galeria": [{
+        "normal": "img/galeria/1.jpg",
+        "retina": "img/galeria/1-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/2.jpg",
+        "retina": "img/galeria/2-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/3.jpg",
+        "retina": "img/galeria/3-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/4.jpg",
+        "retina": "img/galeria/4-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/5.jpg",
+        "retina": "img/galeria/5-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/6.jpg",
+        "retina": "img/galeria/6-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/7.jpg",
+        "retina": "img/galeria/7-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/8.jpg",
+        "retina": "img/galeria/8-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/9.jpg",
+        "retina": "img/galeria/9-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/10.jpg",
+        "retina": "img/galeria/10-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/11.jpg",
+        "retina": "img/galeria/11-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/12.jpg",
+        "retina": "img/galeria/12-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/13.jpg",
+        "retina": "img/galeria/13-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/14.jpg",
+        "retina": "img/galeria/14-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/15.jpg",
+        "retina": "img/galeria/15-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/16.jpg",
+        "retina": "img/galeria/16-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/17.jpg",
+        "retina": "img/galeria/17-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/18.jpg",
+        "retina": "img/galeria/18-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/19.jpg",
+        "retina": "img/galeria/19-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/20.jpg",
+        "retina": "img/galeria/20-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/21.jpg",
+        "retina": "img/galeria/21-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/22.jpg",
+        "retina": "img/galeria/22-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/23.jpg",
+        "retina": "img/galeria/23-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/24.jpg",
+        "retina": "img/galeria/24-2x.jpg",
+        "alt": "GS8"
+    }, {
+        "normal": "img/galeria/25.jpg",
+        "retina": "img/galeria/25-2x.jpg",
+        "alt": "GS8"
+    }]
 }
