@@ -19,8 +19,10 @@ article#contato.article--light
 
     .two-third
       form#contatoForm.frm(method='post', action='http://email.gruposuper8.com/send.php')
-        input#idade.visuallyhidden(name='idade', type='text', placeholder='Idade *')
         .frm__grupo
+          
+          input#idade.visuallyhidden(name='idade', type='text', placeholder='Idade *')
+
           label(for='#nomeForm') Nome
           input#nomeForm(name='nome', type='text', placeholder='Nome *')
         .frm__grupo

@@ -152,7 +152,7 @@ enviaForm = (event) ->
   .done (res) ->
     console.log 'ok', res
     if res.success
-      $contatoForm[0].reset
+      $contatoForm[0].reset()
     alert res.message
     return
   .fail ->

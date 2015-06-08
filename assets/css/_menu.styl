@@ -23,11 +23,25 @@
     display block
 
 .navbar
-  width 100vw
+  width 100%
   position fixed
   top 19px
   left 0
   z-index 1000
+  +below(768px)
+    z-index 1001
+    // position fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left auto
+    width $menuSize * 1px
+    height 100%
+    transform translateX($menuSize * 1px)
+    overflow-y auto
+    background-image linear-gradient(to bottom, rgba(black , 1) 0%, rgba(black , 0.5) 100%)
+    &.open
+      transform translateX(0)
 
 .navbar__ul
   position relative
@@ -69,22 +83,6 @@ body
   &.open
   &.open ~ main
     transform translateX($menuSize * -1px)
-
-.navbar
-  +below(768px)
-    z-index 1001
-    position fixed
-    top: 0
-    bottom: 0
-    right: 0
-    left auto
-    width $menuSize * 1px
-    height 100%
-    transform translateX($menuSize * 1px)
-    overflow-y auto
-    background-image linear-gradient(to bottom, rgba(black , 1) 0%, rgba(black , 0.5) 100%)
-    &.open
-      transform translateX(0)
 
 .header-bg,
 .navbar,

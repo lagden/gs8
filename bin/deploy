@@ -10,7 +10,7 @@ CURR_FOLDER=`pwd`
 cd $CURR_FOLDER
 LOG=$CURR_FOLDER/rsync.log
 SOURCE=$CURR_FOLDER/public/.
-DEST=gruposuper8.com:/home/lagden/webapps/gs8/.
+DEST=75.126.173.136:/home/lagden/webapps/gs8/.
 
 # Sync
 rsync $SOURCE $DEST --rsh ssh --recursive --delete > $LOG
